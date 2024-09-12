@@ -29,6 +29,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
@@ -72,14 +74,13 @@ private fun PosicionPantalla(titulo:String,imagen: Painter,modifier:Modifier=Mod
             contentDescription =null,
             contentScale = ContentScale.FillHeight,
             alignment = Alignment.Center
-
-
         )
         Text(
             text=titulo,
             modifier=Modifier.padding(16.dp),
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            fontFamily = FontFamily.Cursive
         )
         OutlinedTextFieldExample()
 
@@ -99,7 +100,6 @@ fun OutlinedTextFieldExample() {
         onValueChange = { name = it },
         label = { Text("Mi edad humana") }
     )
-
 }
 @Composable
 fun ElevatedButtonExample(onClick: () -> Unit) {
